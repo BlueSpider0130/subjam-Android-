@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginsignupActivity">
+
+    <ImageView
+        android:id="@+id/logo_imageView"
+        android:layout_width="@dimen/logo_width"
+        android:layout_height="@dimen/logo_height"
+        android:layout_marginTop="@dimen/logo_margin_top_main"
+        android:contentDescription="TODO"
+        android:src="@drawable/logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/login_button"
+        android:layout_width="@dimen/btn_width_register"
+        android:layout_height="@dimen/btn_height_register"
+        android:layout_marginTop="130dp"
+        android:text="LOGIN"
+        android:textSize="@dimen/btn_font_size"
+        android:textColor="@color/primary"
+        android:background="@drawable/btn_rounded_corner_borders"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo_imageView" />
+
+    <Button
+        android:id="@+id/signup_button"
+        android:layout_width="@dimen/btn_width_register"
+        android:layout_height="@dimen/btn_height_register"
+        android:layout_marginTop="@dimen/btn_font_size"
+        android:background="@drawable/btn_rounded_corners"
+        android:textColor="@color/white"
+        android:textSize="@dimen/btn_font_size"
+        android:text="SIGN UP"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_button" />
+</androidx.constraintlayout.widget.ConstraintLayout>

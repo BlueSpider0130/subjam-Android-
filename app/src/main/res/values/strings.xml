@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Subjam</string>
+    <string name="font_size">CREATE AN ACCOUNT</string>
+
+    <string name="email">E-mail</string>
+    <string name="username">User name / Band name</string>.
+    <string name="password">Password</string>
+</resources>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+<!--    Logo style-->
+    <dimen name="logo_width">220dp</dimen>
+    <dimen name="logo_height">150dp</dimen>
+<!--    Logo style-->
+
+<!--    Button style-->
+    <dimen name="btn_font_size">20dp</dimen>
+<!--    Button style-->
+
+<!--    activity_main style-->
+    <dimen name="btn_width_register">140dp</dimen>
+    <dimen name="btn_height_register">40dp</dimen>
+    <dimen name="logo_margin_top_main">130dp</dimen>
+<!--    activity_main style-->
+
+<!--    activity_signup style-->
+    <dimen name="logo_margin_top_signup">90dp</dimen>
+    <dimen name="font_size">22dp</dimen>
+    <dimen name="font_size_margin_top">60dp</dimen>
+    <dimen name="font_size_signup">15dp</dimen>
+<!--    activity_signup style-->
+
+</resources>
