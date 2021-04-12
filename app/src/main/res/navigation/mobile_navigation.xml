@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_listen">
+
+    <fragment
+        android:id="@+id/navigation_listen"
+        android:name="com.example.myapplication.ui.listen.ListenFragment"
+        android:label="@string/title_listen"
+        tools:layout="@layout/fragment_listen" />
+
+    <fragment
+        android:id="@+id/navigation_broadcast"
+        android:name="com.example.myapplication.ui.broadcast.BroadcastFragment"
+        android:label="@string/title_broadcast"
+        tools:layout="@layout/fragment_broadcast" />
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.example.myapplication.ui.profile.ProfileFragment"
+        android:label="@string/title_profile"
+        tools:layout="@layout/fragment_profile" />
+
+<!--    <fragment-->
+<!--        android:id="@+id/next"-->
+<!--        android:name="com.example.myapplication.ui.broadcast.BroadcastFragment"-->
+<!--        tools:layout="@layout/fragment_profile"/>-->
+</navigation>

@@ -3,6 +3,13 @@
     <string name="font_size">CREATE AN ACCOUNT</string>
 
     <string name="email">E-mail</string>
-    <string name="username">User name / Band name</string>.
+    <string name="username">User name / Band name</string>
     <string name="password">Password</string>
+
+    <string name="text_1">Checking this box will allow explicit broadcasts to be shown on your feed</string>
+    <string name="title_activity_bottom_navigation">MainActivity</string>
+    <string name="title_listen">LISTEN</string>
+    <string name="title_broadcast">BROADCAST</string>
+    <string name="title_profile">PROFILE</string>
+
 </resources>

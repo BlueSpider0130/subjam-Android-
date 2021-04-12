@@ -6,6 +6,16 @@
     android:layout_height="match_parent"
     tools:context=".Signup2Activity">
 
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="cross_button,camera_icon_imageView,camera_icon,addphoto_textView"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <Button
         android:id="@+id/cross_button"
         android:layout_width="30dp"
@@ -18,13 +28,124 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/camera_icon_imageView"
         android:layout_width="125dp"
         android:layout_height="125dp"
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/circle_avatar" />
+
+    <ImageView
+        android:id="@+id/camera_icon"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="@+id/camera_icon_imageView"
+        app:layout_constraintStart_toStartOf="@+id/camera_icon_imageView"
+        app:layout_constraintTop_toTopOf="@+id/camera_icon_imageView"
+        app:srcCompat="@drawable/camera_icon" />
+
+    <TextView
+        android:id="@+id/addphoto_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Add a photo"
+        app:layout_constraintEnd_toEndOf="@+id/camera_icon_imageView"
+        app:layout_constraintStart_toStartOf="@+id/camera_icon_imageView"
+        app:layout_constraintTop_toBottomOf="@+id/camera_icon" />
+
+    <EditText
+        android:id="@+id/editText_bio"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="30dp"
+        android:background="@color/default_back_grey"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="Add a Bio here"
+        android:inputType="textMultiLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/camera_icon_imageView"
+        app:layout_constraintWidth_percent="0.8" />
+
+    <EditText
+        android:id="@+id/editText_socialLink"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/default_back_grey"
+        android:ems="10"
+        android:hint="Add website / social media URL here"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_bio"
+        app:layout_constraintWidth_percent="0.8" />
+
+    <TextView
+        android:id="@+id/textView_check"
+        android:layout_width="138dp"
+        android:layout_height="23dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:gravity="center"
+        android:text="EXPLICIT CONTENT"
+        android:textColor="@color/black"
+        android:textFontWeight="700"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toBottomOf="@+id/checkbox_imageView"
+        app:layout_constraintStart_toEndOf="@+id/checkbox_imageView"
+        app:layout_constraintTop_toTopOf="@+id/checkbox_imageView"
+        app:lineHeight="30dp" />
+
+    <ImageView
+        android:id="@+id/checkbox_imageView"
+        android:layout_width="21dp"
+        android:layout_height="23dp"
+        android:layout_marginTop="25dp"
+        app:layout_constraintStart_toStartOf="@+id/editText_socialLink"
+        app:layout_constraintTop_toBottomOf="@+id/editText_socialLink"
+        app:srcCompat="@drawable/check_border" />
+
+    <ImageView
+        android:id="@+id/tick_imageView"
+        android:layout_width="29dp"
+        android:layout_height="56dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/checkbox_imageView"
+        app:layout_constraintEnd_toEndOf="@+id/checkbox_imageView"
+        app:layout_constraintStart_toStartOf="@+id/checkbox_imageView"
+        app:layout_constraintTop_toTopOf="@+id/checkbox_imageView"
+        app:srcCompat="@drawable/check_long" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="332dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/text_1"
+        android:textSize="17dp"
+        app:layout_constraintStart_toStartOf="@+id/editText_bio"
+        app:layout_constraintTop_toBottomOf="@+id/textView_check" />
+
+    <Button
+        android:id="@+id/signup_button"
+        android:layout_width="@dimen/btn_width_register"
+        android:layout_height="@dimen/btn_height_register"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/btn_rounded_corners"
+        android:text="SIGN UP"
+        android:textColor="@color/white"
+        android:textSize="@dimen/btn_font_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
