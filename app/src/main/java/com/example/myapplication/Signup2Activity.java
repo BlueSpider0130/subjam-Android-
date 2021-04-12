@@ -20,7 +20,7 @@ public class Signup2Activity extends AppCompatActivity {
         setContentView(R.layout.activity_signup2);
 
         ActionBar actionBar = getSupportActionBar();
-//        actionBar.hide();
+        actionBar.hide();
 
         Button cross = (Button)findViewById(R.id.cross_button);
         Button creataccount = (Button)findViewById(R.id.signup_button);

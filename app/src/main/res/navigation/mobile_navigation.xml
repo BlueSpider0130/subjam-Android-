@@ -23,8 +23,8 @@
         android:label="@string/title_profile"
         tools:layout="@layout/fragment_profile" />
 
-<!--    <fragment-->
-<!--        android:id="@+id/next"-->
-<!--        android:name="com.example.myapplication.ui.broadcast.BroadcastFragment"-->
-<!--        tools:layout="@layout/fragment_profile"/>-->
+    <fragment
+        android:id="@+id/listener_client"
+        android:name="com.example.myapplication.ui.broadcast.BroadcastFragment"
+        tools:layout="@layout/fragment_profile"/>
 </navigation>
