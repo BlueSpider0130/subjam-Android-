@@ -1,9 +1,13 @@
 package com.example.myapplication.ui.listen;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
@@ -11,10 +15,15 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.navigation.Navigation;
 
+import com.example.myapplication.LoadingActivity;
 import com.example.myapplication.R;
+import com.example.myapplication.ui.ListenerClient.ListenerClientFragment;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -22,12 +31,16 @@ import java.util.HashMap;
 public class ListenFragment extends Fragment {
 
     private ListenViewModel listenViewModel;
+    private ImageView before;
+
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         listenViewModel =
                 new ViewModelProvider(this).get(ListenViewModel.class);
         View root = inflater.inflate(R.layout.fragment_listen, container, false);
+        before = (ImageView)this.getActivity().findViewById(R.id. back_icon);
+        before.setVisibility(View.INVISIBLE);
 
         ListView simpleListView = (ListView)root.findViewById(R.id.list_view) ;
 
@@ -55,13 +68,18 @@ public class ListenFragment extends Fragment {
         int[] to={R.id.band_name,R.id.title,R.id.imageView,R.id.description,R.id.listener,R.id.gen};
         SimpleAdapter simpleAdapter=new SimpleAdapter(this.getContext(),arrayList,R.layout.list_view_items,from,to);//Create object and set the parameters for simpleAdapter
         simpleListView.setAdapter(simpleAdapter);//sets the adapter for listView
-//        final TextView textView = root.findViewById(R.id.text_listen);
-//        listenViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
-//            @Override
-//            public void onChanged(@Nullable String s) {
-////                textView.setText(s);
-//            }
-//        });
+        simpleListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                before.setVisibility(View.VISIBLE);
+                goto_eachitem(view);
+            }
+        });
+
         return root;
+    }
+
+    private void goto_eachitem(View view){
+        Navigation.findNavController(view).navigate(R.id.listener_client);
     }
 }

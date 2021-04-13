@@ -25,6 +25,6 @@
 
     <fragment
         android:id="@+id/listener_client"
-        android:name="com.example.myapplication.ui.broadcast.BroadcastFragment"
-        tools:layout="@layout/fragment_profile"/>
+        android:name="com.example.myapplication.ui.ListenerClient.ListenerClientFragment"
+        tools:layout="@layout/listener_client_fragment"/>
 </navigation>

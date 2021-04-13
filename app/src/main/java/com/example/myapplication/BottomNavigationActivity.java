@@ -21,7 +21,7 @@ public class BottomNavigationActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bottom_navigation);
-        BottomNavigationView navView = findViewById(R.id.nav_view);
+        final BottomNavigationView navView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
@@ -35,6 +35,7 @@ public class BottomNavigationActivity extends AppCompatActivity {
         actionBar.hide();
 
         ImageView back_icon = (ImageView)findViewById(R.id.back_icon);
+        back_icon.setVisibility(back_icon.INVISIBLE);
         back_icon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -44,8 +45,11 @@ public class BottomNavigationActivity extends AppCompatActivity {
     }
 
     private void goto_before(){
-        Intent it = new Intent(this, Signup2Activity.class);
+        Intent it = new Intent(this, BottomNavigationActivity.class);
         startActivity(it);
+
+//        Navigation.findNavController().navigate(R.id.listener_client);
+//        this.finish();
     }
 
 }

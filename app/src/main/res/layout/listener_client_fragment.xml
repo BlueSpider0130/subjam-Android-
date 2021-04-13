@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.ListenerClient.ListenerClientFragment"
+    android:paddingTop="50dp"
+    android:paddingBottom="50dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageView_from_list"
+            android:layout_width="250dp"
+            android:layout_height="230dp"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/music_action"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@drawable/music_action_rounded"/>
+
+        <TextView
+            android:id="@+id/band_name_from_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:text="BAND NAME"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView_from_list" />
+
+        <TextView
+            android:id="@+id/title_from_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textSize="15dp"
+            android:textColor="@color/black"
+            android:text="TITLE OF BROADCAST"
+            app:layout_constraintStart_toStartOf="@+id/band_name_from_list"
+            app:layout_constraintTop_toBottomOf="@+id/band_name_from_list" />
+
+        <TextView
+            android:id="@+id/description_from_list"
+            android:layout_width="350dp"
+            android:layout_height="37dp"
+            android:layout_marginTop="5dp"
+            android:text="Small Description of what to expect from the broadcast goes here goes here."
+            android:textColor="@color/default_font_color"
+            android:textSize="15dp"
+            app:layout_constraintStart_toStartOf="@+id/title_from_list"
+            app:layout_constraintTop_toBottomOf="@+id/title_from_list" />
+
+        <TextView
+            android:id="@+id/TextView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:text="Listeners:"
+            app:layout_constraintStart_toStartOf="@+id/description_from_list"
+            app:layout_constraintTop_toBottomOf="@+id/description_from_list" />
+
+        <TextView
+            android:id="@+id/listener_from_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="450"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            app:layout_constraintBottom_toBottomOf="@+id/TextView1"
+            app:layout_constraintStart_toEndOf="@+id/TextView1"
+            app:layout_constraintTop_toTopOf="@+id/TextView1" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="80dp"
+            android:layout_marginRight="80dp"
+            android:text="Genre:"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/TextView1"
+            app:layout_constraintEnd_toEndOf="@+id/description_from_list"
+            app:layout_constraintTop_toTopOf="@+id/TextView1" />
+
+        <TextView
+            android:id="@+id/gen_from_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rock"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/textView10"
+            app:layout_constraintStart_toEndOf="@+id/textView10"
+            app:layout_constraintTop_toTopOf="@+id/textView10" />
+
+        <ImageButton
+            android:id="@+id/imageButton2"
+            android:layout_width="144dp"
+            android:layout_height="155dp"
+            android:background="@drawable/btn_rounded_corners"
+            android:src="@android:drawable/ic_media_play"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/TextView1" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
