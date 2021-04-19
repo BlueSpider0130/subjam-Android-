@@ -105,15 +105,61 @@
             app:layout_constraintStart_toEndOf="@+id/textView10"
             app:layout_constraintTop_toTopOf="@+id/textView10" />
 
-        <ImageButton
-            android:id="@+id/imageButton2"
-            android:layout_width="144dp"
-            android:layout_height="155dp"
-            android:background="@drawable/btn_rounded_corners"
-            android:src="@android:drawable/ic_media_play"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/TextView1" />
+            app:layout_constraintTop_toBottomOf="@+id/TextView1">
+
+            <ImageButton
+                android:id="@+id/btn_music_play"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:src="@drawable/btn_music_play"
+                app:layout_constraintBottom_toBottomOf="@+id/btn_music_stop"
+                app:layout_constraintStart_toStartOf="@+id/btn_music_stop"
+                app:layout_constraintTop_toTopOf="@+id/btn_music_stop" />
+
+            <ImageButton
+                android:id="@+id/btn_music_stop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:background="@color/white"
+                android:src="@drawable/btn_music_stop"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <SeekBar
+            android:id="@+id/music_playBar"
+            android:layout_width="0dp"
+            android:layout_height="13dp"
+            app:layout_constraintWidth_percent="0.8"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:progressDrawable="@drawable/customprogressbar"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+        <!--        <ProgressBar-->
+<!--            android:id="@+id/music_playBar"-->
+<!--            style="?android:attr/progressBarStyleHorizontal"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="13dp"-->
+<!--            android:layout_marginTop="20dp"-->
+<!--            android:progressDrawable="@drawable/customprogressbar"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/constraintLayout"-->
+<!--            app:layout_constraintWidth_percent="0.8" />-->
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

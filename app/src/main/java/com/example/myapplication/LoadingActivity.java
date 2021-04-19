@@ -41,12 +41,12 @@ public class LoadingActivity extends AppCompatActivity {
                     });
                     try {
                         // Sleep for 200 milliseconds.
-                        Thread.sleep(50);
+                        Thread.sleep(25);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
                     if (progressStatus == 100){
-                        goto_first();
+                        goto_next();
                         finish();
                     }
                 }
@@ -56,8 +56,8 @@ public class LoadingActivity extends AppCompatActivity {
     }
 
 
-    public void goto_first() {
-        Intent it = new Intent(this,SignupActivity.class);
+    public void goto_next() {
+        Intent it = new Intent(this,BottomNavigationActivity.class);
         startActivity(it);
     }
 

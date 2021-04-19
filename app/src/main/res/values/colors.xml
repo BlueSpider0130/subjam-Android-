@@ -9,5 +9,8 @@
     <color name="grey_background">#f3f3f3</color>
     <color name="default_font_color">#7b7b7b</color>
     <color name="default_back_grey">#F3F3F3</color>
+    <color name="streaming">#6dd500</color>
+    <color name="streaming_paused">#f7b600</color>
+    <color name="seekbar_streaming">#02275e</color>
 
 </resources>

@@ -11,5 +11,11 @@
     <string name="title_listen">LISTEN</string>
     <string name="title_broadcast">BROADCAST</string>
     <string name="title_profile">PROFILE</string>
+    <string name="ToS">TO BROADCAST, I AGREE TO THE BROADCASTER</string>
+    <string name="underline"><u>TERMS OF SERVICE</u></string>
+    <string name="streaming_play">LIVESTREAMING BROADCAST</string>
+    <string name="streaming_pause">BROADCAST PAUSED</string>
+    <string name="streaming_title">TITLE OF BROADCAST</string>
+    <string name="end_broad"><u>END BROADCAST</u></string>
 
 </resources>

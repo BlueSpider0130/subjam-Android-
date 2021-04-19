@@ -17,6 +17,7 @@ public class LoginsignupActivity extends AppCompatActivity {
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
         Button signup = (Button) findViewById(R.id.signup_button);
+        Button login = (Button) findViewById(R.id.login_button);
 
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -24,11 +25,21 @@ public class LoginsignupActivity extends AppCompatActivity {
                 nextContent();
             }
         });
+        login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                gotoLoading();
+            }
+        });
     }
 
     private void nextContent() {
-        Intent loading = new Intent(this,LoadingActivity.class);
+        Intent loading = new Intent(this,SignupActivity.class);
         startActivity(loading);
+    }
+    private void gotoLoading() {
+        Intent go = new Intent(this, LoadingActivity.class);
+        startActivity(go);
     }
 
 

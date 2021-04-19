@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.metadata.MetadataForm">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="@dimen/default_bar_height"
+        android:paddingBottom="@dimen/default_bar_height">
+
+        <ImageView
+            android:id="@+id/camera_icon_imageView"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:layout_marginTop="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/circle_avatar" />
+
+        <ImageView
+            android:id="@+id/camera_icon"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="30dp"
+            app:layout_constraintEnd_toEndOf="@+id/camera_icon_imageView"
+            app:layout_constraintStart_toStartOf="@+id/camera_icon_imageView"
+            app:layout_constraintTop_toTopOf="@+id/camera_icon_imageView"
+            app:srcCompat="@drawable/camera_icon" />
+
+        <TextView
+            android:id="@+id/addphoto_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Add a photo"
+            app:layout_constraintEnd_toEndOf="@+id/camera_icon_imageView"
+            app:layout_constraintStart_toStartOf="@+id/camera_icon_imageView"
+            app:layout_constraintTop_toBottomOf="@+id/camera_icon" />
+
+        <EditText
+            android:id="@+id/editText_titleBroadcast"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/default_back_grey"
+            android:ems="10"
+            android:hint="Title of Broadcast"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/camera_icon_imageView"
+            app:layout_constraintWidth_percent="0.8" />
+
+        <EditText
+            android:id="@+id/editText_genre"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="15dp"
+            android:background="@color/default_back_grey"
+            android:ems="10"
+            android:hint="Genre"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editText_titleBroadcast"
+            app:layout_constraintWidth_percent="0.8" />
+
+        <EditText
+            android:id="@+id/editText_description"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="15dp"
+            android:background="@color/default_back_grey"
+            android:ems="10"
+            android:gravity="start|top"
+            android:hint="Description"
+            android:inputType="textMultiLine"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editText_genre"
+            app:layout_constraintWidth_percent="0.8" />
+
+        <TextView
+            android:id="@+id/textView_check"
+            android:layout_width="138dp"
+            android:layout_height="23dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:text="EXPLICIT CONTENT"
+            android:textColor="@color/black"
+            android:textFontWeight="700"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintBottom_toBottomOf="@+id/checkbox_imageView"
+            app:layout_constraintStart_toEndOf="@+id/checkbox_imageView"
+            app:layout_constraintTop_toTopOf="@+id/checkbox_imageView"
+            app:lineHeight="30dp" />
+
+        <ImageView
+            android:id="@+id/checkbox_imageView"
+            android:layout_width="21dp"
+            android:layout_height="23dp"
+            android:layout_marginTop="15dp"
+            app:layout_constraintStart_toStartOf="@+id/editText_description"
+            app:layout_constraintTop_toBottomOf="@+id/editText_description"
+            app:srcCompat="@drawable/check_border" />
+
+        <ImageView
+            android:id="@+id/tick_imageView"
+            android:layout_width="29dp"
+            android:layout_height="56dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/checkbox_imageView"
+            app:layout_constraintEnd_toEndOf="@+id/checkbox_imageView"
+            app:layout_constraintStart_toStartOf="@+id/checkbox_imageView"
+            app:layout_constraintTop_toTopOf="@+id/checkbox_imageView"
+            app:srcCompat="@drawable/check_long" />
+
+        <Button
+            android:id="@+id/golive_button"
+            android:layout_width="@dimen/btn_width_register"
+            android:layout_height="@dimen/btn_height_register"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="50dp"
+            android:background="@drawable/btn_rounded_corners"
+            android:text="GO LIVE"
+            android:textColor="@color/white"
+            android:textSize="@dimen/btn_font_size"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/checkbox_imageView" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

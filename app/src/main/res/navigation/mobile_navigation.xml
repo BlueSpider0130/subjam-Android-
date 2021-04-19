@@ -27,4 +27,14 @@
         android:id="@+id/listener_client"
         android:name="com.example.myapplication.ui.ListenerClient.ListenerClientFragment"
         tools:layout="@layout/listener_client_fragment"/>
+
+    <fragment
+        android:id="@+id/metadata_form"
+        android:name="com.example.myapplication.ui.metadata.MetadataForm"
+        tools:layout="@layout/metadata_form_fragment"/>
+
+    <fragment
+        android:id="@+id/broadcast_streaming"
+        android:name="com.example.myapplication.ui.BroadCastStreaming.BroadCastStreaming"
+        tools:layout="@layout/broad_cast_streaming_fragment"/>
 </navigation>

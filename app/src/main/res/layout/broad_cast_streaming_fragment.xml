@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.BroadCastStreaming.BroadCastStreaming">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="@dimen/default_bar_height"
+        android:paddingBottom="@dimen/default_bar_height">
+
+        <TextView
+            android:id="@+id/textView_play"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintWidth_percent="1"
+            android:textAlignment="center"
+            android:background="@color/streaming"
+            android:textColor="@color/white"
+            android:textSize="12dp"
+            android:textStyle="bold"
+            android:text="@string/streaming_play"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+        <ImageView
+            android:id="@+id/imageView_from_list"
+            android:layout_width="0dp"
+            android:layout_height="180dp"
+            android:layout_marginTop="35dp"
+            android:background="@drawable/music_action_rounded"
+            android:src="@drawable/music_action"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.5" />
+
+        <SeekBar
+            android:id="@+id/music_playBar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:layout_marginTop="10dp"
+            android:progressDrawable="@drawable/customseekbar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView_from_list"
+            android:thumb="@drawable/customthumb"
+            android:splitTrack="false"
+            app:layout_constraintWidth_percent="0.8" />
+
+        <SeekBar
+            android:id="@+id/music_playBar_2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:background="@android:color/transparent"
+            android:progressDrawable="@drawable/customseekbar"
+            android:thumb="@drawable/customthumb"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView_from_list"
+            app:layout_constraintWidth_percent="0.8" />
+
+        <TextView
+            android:id="@+id/textView_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/streaming_title"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="@dimen/font_size_signup"
+            app:layout_constraintStart_toStartOf="@+id/music_playBar_2"
+            app:layout_constraintTop_toBottomOf="@+id/music_playBar_2" />
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/white"
+            android:src="@drawable/setting_icon"
+            app:layout_constraintBottom_toBottomOf="@+id/textView_title"
+            app:layout_constraintEnd_toEndOf="@+id/music_playBar_2"
+            app:layout_constraintTop_toTopOf="@+id/textView_title" />
+
+        <TextView
+            android:id="@+id/description_streaming"
+            android:layout_width="313dp"
+            android:layout_height="wrap_content"
+            android:text="Small Description of what to expect from the broadcast goes here goes here."
+            android:textColor="@color/default_font_color"
+            android:textSize="15dp"
+            app:layout_constraintStart_toStartOf="@+id/textView_title"
+            app:layout_constraintTop_toBottomOf="@+id/textView_title" />
+
+        <TextView
+            android:id="@+id/TextView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Listeners:"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/description_streaming"
+            app:layout_constraintTop_toBottomOf="@+id/description_streaming" />
+
+        <TextView
+            android:id="@+id/listener_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="450"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            app:layout_constraintBottom_toBottomOf="@+id/TextView1"
+            app:layout_constraintStart_toEndOf="@+id/TextView1"
+            app:layout_constraintTop_toTopOf="@+id/TextView1" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="50dp"
+            android:layout_marginRight="50dp"
+            android:text="Genre:"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/TextView1"
+            app:layout_constraintEnd_toEndOf="@+id/description_streaming"
+            app:layout_constraintTop_toTopOf="@+id/TextView1" />
+
+        <TextView
+            android:id="@+id/gen_streaming"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rock"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/textView10"
+            app:layout_constraintStart_toEndOf="@+id/textView10"
+            app:layout_constraintTop_toTopOf="@+id/textView10" />
+
+        <Button
+            android:id="@+id/pause_button"
+            android:layout_width="230dp"
+            android:layout_height="@dimen/btn_height_register"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/btn_rounded_corners"
+            android:text="PAUSE BROADCAST"
+            android:textColor="@color/white"
+            android:textSize="@dimen/btn_font_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/TextView1" />
+
+        <TextView
+            android:id="@+id/end_broadcast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/black"
+            android:hint="Bottom line color change"
+            android:text="@string/end_broad"
+            android:textColor="@color/black"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/pause_button"
+            app:layout_constraintStart_toStartOf="@+id/pause_button"
+            app:layout_constraintTop_toBottomOf="@+id/pause_button" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

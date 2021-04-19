@@ -4,19 +4,97 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.broadcast.BroadcastFragment">
+    tools:context=".ui.broadcast.BroadcastFragment"
+    android:paddingTop="50dp"
+    android:paddingBottom="50dp">
 
-    <TextView
-        android:id="@+id/text_broadcast"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
+    <EditText
+        android:id="@+id/editTextText_ToS"
+        android:layout_width="0dp"
+        app:layout_constraintWidth_percent="0.8"
+        android:layout_height="350dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:background="@drawable/check_border"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:text="@string/ToS"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/editTextText_ToS"
+        app:layout_constraintStart_toStartOf="@+id/editTextText_ToS" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Bottom line color change"
+        android:backgroundTint="@color/black"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:text="@string/underline"
+        app:layout_constraintStart_toStartOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <TextView
+        android:id="@+id/textView_check"
+        android:layout_width="wrap_content"
+        android:layout_height="23dp"
+        android:layout_gravity="left"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:gravity="center"
+        android:text="I AGREE"
+        android:textSize="25dp"
+        android:textColor="@color/black"
+        android:textFontWeight="700"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toBottomOf="@+id/checkbox_imageView"
+        app:layout_constraintStart_toEndOf="@+id/checkbox_imageView"
+        app:layout_constraintTop_toTopOf="@+id/checkbox_imageView"
+        app:lineHeight="30dp" />
+
+    <ImageView
+        android:id="@+id/checkbox_imageView"
+        android:layout_width="21dp"
+        android:layout_height="23dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="@+id/editTextText_ToS"
+        app:layout_constraintTop_toBottomOf="@+id/editTextText_ToS"
+        app:srcCompat="@drawable/check_border" />
+
+    <ImageView
+        android:id="@+id/tick_imageView"
+        android:layout_width="29dp"
+        android:layout_height="56dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/checkbox_imageView"
+        app:layout_constraintEnd_toEndOf="@+id/checkbox_imageView"
+        app:layout_constraintStart_toStartOf="@+id/checkbox_imageView"
+        app:layout_constraintTop_toTopOf="@+id/checkbox_imageView"
+        app:srcCompat="@drawable/check_long" />
+
+    <Button
+        android:id="@+id/continue_button"
+        android:layout_width="@dimen/btn_width_register"
+        android:layout_height="@dimen/btn_height_register"
+        android:background="@drawable/btn_rounded_corners"
+        android:visibility="invisible"
+        android:text="CONTINUE"
+        android:textColor="@color/white"
+        android:textSize="@dimen/btn_font_size"
+        app:layout_constraintBottom_toBottomOf="@+id/textView_check"
+        app:layout_constraintEnd_toEndOf="@+id/editTextText_ToS"
+        app:layout_constraintTop_toTopOf="@+id/textView_check" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
