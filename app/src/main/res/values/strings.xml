@@ -17,5 +17,7 @@
     <string name="streaming_pause">BROADCAST PAUSED</string>
     <string name="streaming_title">TITLE OF BROADCAST</string>
     <string name="end_broad"><u>END BROADCAST</u></string>
+    <string name="end_broad_des">Are you sure you want to end the broadcast?</string>
+    <string name="cancel"><u>CANCEL</u></string>
 
 </resources>

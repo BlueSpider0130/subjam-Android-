@@ -2,7 +2,11 @@ package com.example.myapplication.ui.BroadCastStreaming;
 
 import androidx.lifecycle.ViewModelProvider;
 
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.content.DialogInterface;
 import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -12,7 +16,10 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -35,8 +42,9 @@ public class BroadCastStreaming extends Fragment {
         root = inflater.inflate(R.layout.broad_cast_streaming_fragment, container, false);
 
         Button play_pause = (Button) root.findViewById(R.id.pause_button);
+        TextView setDialog = (TextView) root.findViewById(R.id.end_broadcast);
         flag = ((Button) root.findViewById(R.id.pause_button)).getText().length();
-//        String tmpStr10 = String.valueOf(flag);
+
         play_pause.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -44,6 +52,13 @@ public class BroadCastStreaming extends Fragment {
                 play();
             }
         });
+        setDialog.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog();
+            }
+        });
+
         return root;
     }
 
@@ -70,6 +85,41 @@ public class BroadCastStreaming extends Fragment {
             status.setBackgroundColor(Color.parseColor("#6dd500"));
             flag = 15;
         }
+    }
+    public void dialog(){
+        final Dialog dialog = new Dialog(getActivity());
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setContentView(R.layout.modal);
+        dialog.setCanceledOnTouchOutside(true);
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+
+        ImageView cross_close = (ImageView) dialog.findViewById(R.id.cross);
+        TextView cancel = (TextView) dialog.findViewById(R.id.cancel_broadcast);
+        Button end_broadcast = (Button) dialog.findViewById(R.id.end_button);
+
+        cross_close.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+        cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+        end_broadcast.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+
+        dialog.setCanceledOnTouchOutside(false);
+        dialog.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
+        dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        dialog.show();
     }
 
 }
