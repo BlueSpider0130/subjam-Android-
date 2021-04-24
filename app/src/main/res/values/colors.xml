@@ -12,5 +12,7 @@
     <color name="streaming">#6dd500</color>
     <color name="streaming_paused">#f7b600</color>
     <color name="seekbar_streaming">#02275e</color>
+    <color name="bold_title">#082B5E</color>
+    <color name="url">#6E6E6E</color>
 
 </resources>

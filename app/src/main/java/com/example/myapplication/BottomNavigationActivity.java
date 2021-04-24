@@ -2,6 +2,7 @@ package com.example.myapplication;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
@@ -40,19 +41,14 @@ public class BottomNavigationActivity extends AppCompatActivity {
         back_icon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                goto_before();
+                dispatchKeyEvent(new KeyEvent(KeyEvent.ACTION_DOWN, KeyEvent.KEYCODE_BACK));
+                dispatchKeyEvent(new KeyEvent(KeyEvent.ACTION_UP, KeyEvent.KEYCODE_BACK));
+                v.setVisibility(View.INVISIBLE);
             }
         });
 
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
     }
 
-    private void goto_before(){
-        Intent it = new Intent(this, BottomNavigationActivity.class);
-        startActivity(it);
-
-//        Navigation.findNavController().navigate(R.id.listener_client);
-//        this.finish();
-    }
 
 }

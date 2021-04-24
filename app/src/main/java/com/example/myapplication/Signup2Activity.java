@@ -51,7 +51,7 @@ public class Signup2Activity extends AppCompatActivity {
         creataccount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                goto_listentab();
+                goto_loadingfeed();
             }
         });
 
@@ -71,8 +71,8 @@ public class Signup2Activity extends AppCompatActivity {
             checkBoxVisible = 0;
         }
     }
-    public void goto_listentab() {
-        Intent it = new Intent(this,BottomNavigationActivity.class);
+    public void goto_loadingfeed() {
+        Intent it = new Intent(this,LoadingFeedActivity.class);
         startActivity(it);
     }
 

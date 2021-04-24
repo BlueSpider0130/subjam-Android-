@@ -21,6 +21,7 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.Navigation;
 
 import com.example.myapplication.R;
+import com.example.myapplication.ui.BroadCastStreaming.BroadCastStreamingViewModel;
 import com.example.myapplication.ui.metadata.MetadataForm;
 
 import java.util.ArrayList;
@@ -29,6 +30,7 @@ import java.util.HashMap;
 public class BroadcastFragment extends Fragment {
 
     private BroadcastViewModel broadcastViewModel;
+    private BroadCastStreamingViewModel broadCastStreamingViewModel;
     public View root;
     int checkBoxVisible = 1;
 
@@ -36,11 +38,15 @@ public class BroadcastFragment extends Fragment {
                              ViewGroup container, Bundle savedInstanceState) {
         broadcastViewModel =
                 new ViewModelProvider(this).get(BroadcastViewModel.class);
+        broadCastStreamingViewModel = new ViewModelProvider(getActivity()).get(BroadCastStreamingViewModel.class);
+        broadCastStreamingViewModel.setDefault();
         root = inflater.inflate(R.layout.fragment_broadcast, container, false);
 
         ImageView checkBox = (ImageView) root.findViewById(R.id.checkbox_imageView);
         TextView checkText = (TextView) root.findViewById(R.id.textView_check);
+        ImageView before = (ImageView) this.getActivity().findViewById(R.id.back_icon);
 
+        before.setVisibility(View.INVISIBLE);
         checkBox.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

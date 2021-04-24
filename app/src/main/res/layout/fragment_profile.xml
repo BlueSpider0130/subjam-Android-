@@ -6,17 +6,176 @@
     android:layout_height="match_parent"
     tools:context=".ui.profile.ProfileFragment">
 
-    <TextView
-        android:id="@+id/text_profile"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <ImageView
+        android:id="@+id/camera_icon_imageView"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:layout_marginTop="80dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/band_avatar"
+        tools:ignore="VectorDrawableCompat" />
+
+    <ImageButton
+        android:id="@+id/settingButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/white"
+        android:src="@drawable/setting_icon"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/band_name_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/bold_title"
+        android:text="@string/band_name"
+        app:layout_constraintEnd_toEndOf="@+id/camera_icon_imageView"
+        app:layout_constraintStart_toStartOf="@+id/camera_icon_imageView"
+        app:layout_constraintTop_toBottomOf="@+id/camera_icon_imageView" />
+
+    <TextView
+        android:id="@+id/band_url"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/url"
+        android:textColor="@color/url"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/band_name_view"
+        app:layout_constraintStart_toStartOf="@+id/band_name_view"
+        app:layout_constraintTop_toBottomOf="@+id/band_name_view" />
+
+    <TextView
+        android:id="@+id/TextView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="70dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="10dp"
+        android:text="Followers:"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/band_url" />
+
+    <TextView
+        android:id="@+id/listener_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="450"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/TextView1"
+        app:layout_constraintStart_toEndOf="@+id/TextView1"
+        app:layout_constraintTop_toTopOf="@+id/TextView1" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="100dp"
+        android:layout_marginRight="100dp"
+        android:text="Following:"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/listener_number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/listener_number" />
+
+    <TextView
+        android:id="@+id/gen_streaming"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="100"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/textView10"
+        app:layout_constraintStart_toEndOf="@+id/textView10"
+        app:layout_constraintTop_toTopOf="@+id/textView10" />
+
+    <TextView
+        android:id="@+id/description_streaming"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintWidth_percent="0.8"
+        android:layout_marginTop="20dp"
+        android:text="@string/small_des"
+        android:textColor="@color/default_font_color"
+        android:textSize="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TextView1" />
+
+    <TextView
+        android:id="@+id/recent_broadcast_name1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/recent_broad"
+        android:textColor="@color/bold_title"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/description_streaming"
+        app:layout_constraintTop_toBottomOf="@+id/description_streaming" />
+
+    <TextView
+        android:id="@+id/textView_gen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textSize="15dp"
+        android:text="@string/gen"
+        app:layout_constraintStart_toStartOf="@+id/recent_broadcast_name1"
+        app:layout_constraintTop_toBottomOf="@+id/recent_broadcast_name1" />
+
+    <TextView
+        android:id="@+id/textView_listen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/lis"
+        app:layout_constraintStart_toStartOf="@+id/textView_gen"
+        app:layout_constraintTop_toBottomOf="@+id/textView_gen" />
+
+    <TextView
+        android:id="@+id/recent_broadcast_name2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/recent_broad"
+        android:textColor="@color/bold_title"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/description_streaming"
+        app:layout_constraintTop_toBottomOf="@+id/textView_listen" />
+
+    <TextView
+        android:id="@+id/textView_gen1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/gen"
+        android:textSize="15dp"
+        app:layout_constraintStart_toStartOf="@+id/description_streaming"
+        app:layout_constraintTop_toBottomOf="@+id/recent_broadcast_name2" />
+
+    <TextView
+        android:id="@+id/textView_listen1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/lis"
+        app:layout_constraintStart_toStartOf="@+id/description_streaming"
+        app:layout_constraintTop_toBottomOf="@+id/textView_gen1" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

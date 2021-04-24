@@ -4,7 +4,9 @@
 
     <string name="email">E-mail</string>
     <string name="username">User name / Band name</string>
+    <string name="user">User name</string>
     <string name="password">Password</string>
+    <string name="login">LOG IN</string>
 
     <string name="text_1">Checking this box will allow explicit broadcasts to be shown on your feed</string>
     <string name="title_activity_bottom_navigation">MainActivity</string>
@@ -19,5 +21,22 @@
     <string name="end_broad"><u>END BROADCAST</u></string>
     <string name="end_broad_des">Are you sure you want to end the broadcast?</string>
     <string name="cancel"><u>CANCEL</u></string>
+
+    <string name="thanks">Broadcast has ended. Thanks for playing!</string>
+    <string name="band_name">BAND NAME GOES HERE</string>
+    <string name="url">WWW.BANDNAMEGOESHERE.COM</string>
+    <string name="small_des">Small description of band / artist / or generic user goes here small description of band / artist / or generic user goes here</string>
+    <string name="recent_broad">Recent Broadcast name</string>
+    <string name="gen">Genre:Rock</string>
+    <string name="lis">Listeners:200</string>
+    <string name="edit_pr">EDIT PROFILE INFO</string>
+    <string name="edit_im">Edit Profile Image</string>
+    <string name="password_bold">PASSWORD</string>
+    <string name="current">Current Password</string>
+    <string name="new_pass">New Password</string>
+    <string name="again_pass">New Password Again</string>
+    <string name="save">SAVE</string>
+    <string name="login_to">LOGIN TO SUBJAM</string>
+    <string name="forget_pass">Forget Password</string>
 
 </resources>

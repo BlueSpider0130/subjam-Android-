@@ -25,7 +25,8 @@
             android:text="@string/streaming_play"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            android:gravity="center_horizontal" />
 
 
 
@@ -81,7 +82,7 @@
             app:layout_constraintTop_toBottomOf="@+id/music_playBar_2" />
 
         <ImageButton
-            android:id="@+id/imageButton"
+            android:id="@+id/settingButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="20dp"
@@ -175,7 +176,8 @@
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="@+id/pause_button"
             app:layout_constraintStart_toStartOf="@+id/pause_button"
-            app:layout_constraintTop_toBottomOf="@+id/pause_button" />
+            app:layout_constraintTop_toBottomOf="@+id/pause_button"
+            android:gravity="center_horizontal" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

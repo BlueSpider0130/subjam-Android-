@@ -32,10 +32,12 @@ public class ListenerClientFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
+        ImageView before = (ImageView) this.getActivity().findViewById(R.id.back_icon);
         final View root = inflater.inflate(R.layout.listener_client_fragment, container, false);
         seek_bar = (SeekBar) root.findViewById(R.id.music_playBar);
         music_play = (ImageButton) root.findViewById(R.id.btn_music_play);
         music_stop = (ImageButton) root.findViewById(R.id.btn_music_stop);
+        before.setVisibility(View.VISIBLE);
 
         music_play.setOnClickListener(new View.OnClickListener() {
             @Override

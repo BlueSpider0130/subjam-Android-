@@ -37,4 +37,20 @@
         android:id="@+id/broadcast_streaming"
         android:name="com.example.myapplication.ui.BroadCastStreaming.BroadCastStreaming"
         tools:layout="@layout/broad_cast_streaming_fragment"/>
+
+    <fragment
+        android:id="@+id/listener_list"
+        android:name="com.example.myapplication.ui.ListnerList.ListenerListFragment"
+        tools:layout="@layout/listener_list_fragment"/>
+
+    <fragment
+        android:id="@+id/edit_profile"
+        android:name="com.example.myapplication.ui.EditProfile.EditProfileFragment"
+        tools:layout="@layout/edit_profile_fragment"/>
+
+    <fragment
+        android:id="@+id/password"
+        android:name="com.example.myapplication.ui.Password.PasswordFragment"
+        tools:layout="@layout/password_fragment"/>
+
 </navigation>

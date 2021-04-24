@@ -8,41 +8,38 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class LoginsignupActivity extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_login);
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
-        Button signup = (Button) findViewById(R.id.signup_button);
-        Button login = (Button) findViewById(R.id.login_button);
+        Button login_button = (Button) findViewById(R.id.login_button);
+        Button cross = (Button) findViewById(R.id.cross_button);
 
-        signup.setOnClickListener(new View.OnClickListener() {
+        login_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                nextContent();
+                GotoLoading();
             }
         });
-        login.setOnClickListener(new View.OnClickListener() {
+
+        cross.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                gotoLogin();
+                goto_first();
             }
         });
     }
 
-    private void nextContent() {
-        Intent loading = new Intent(this,SignupActivity.class);
-        startActivity(loading);
-    }
-    private void gotoLogin() {
-        Intent go = new Intent(this, LoginActivity.class);
+    public void GotoLoading() {
+        Intent go = new Intent(this, LoadingActivity.class);
         startActivity(go);
     }
-
-
-
-
+    public void goto_first() {
+        Intent it = new Intent(this,LoginsignupActivity.class);
+        startActivity(it);
+    }
 }

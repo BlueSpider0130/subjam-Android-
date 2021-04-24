@@ -1,5 +1,6 @@
 package com.example.myapplication.ui.metadata;
 
+import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
 import android.os.Bundle;
@@ -17,12 +18,16 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.myapplication.R;
+import com.example.myapplication.ui.BroadCastStreaming.BroadCastStreamingViewModel;
+import com.example.myapplication.ui.broadcast.BroadcastViewModel;
 
 public class MetadataForm extends Fragment {
     public View root;
     int checkBoxVisible = 1;
+    int edit_flag;
 
     private MetadataFormViewModel mViewModel;
+    private BroadCastStreamingViewModel nViewModel;
 
     public static MetadataForm newInstance() {
         return new MetadataForm();
@@ -33,9 +38,19 @@ public class MetadataForm extends Fragment {
                              @Nullable Bundle savedInstanceState) {
         root = inflater.inflate(R.layout.metadata_form_fragment, container, false);
 
+        mViewModel = new ViewModelProvider(this).get(MetadataFormViewModel.class);
+        nViewModel = new ViewModelProvider(getActivity()).get(BroadCastStreamingViewModel.class);
+
         ImageView checkbox = (ImageView) root.findViewById(R.id.checkbox_imageView);
         TextView checktext = (TextView) root.findViewById(R.id.textView_check);
-        Button golive = (Button) root.findViewById(R.id.golive_button);
+        final Button golive = (Button) root.findViewById(R.id.golive_button);
+        TextView cancel = (TextView) root.findViewById(R.id.cancel_edit);
+
+        // TODO: Use the ViewModel
+        if (nViewModel.getFlag() == 1){
+            golive.setText("SAVE");
+            cancel.setVisibility(View.VISIBLE);
+        }
 
         checkbox.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,14 +70,18 @@ public class MetadataForm extends Fragment {
                 golive(root);
             }
         });
+        cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                golive(root);
+            }
+        });
         return root;
     }
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        mViewModel = new ViewModelProvider(this).get(MetadataFormViewModel.class);
-        // TODO: Use the ViewModel
     }
 
 

@@ -71,7 +71,6 @@ public class ListenFragment extends Fragment {
         simpleListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                before.setVisibility(View.VISIBLE);
                 goto_eachitem(view);
             }
         });
