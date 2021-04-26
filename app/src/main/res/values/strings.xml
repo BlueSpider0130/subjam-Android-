@@ -37,7 +37,7 @@
     <string name="again_pass">New Password Again</string>
     <string name="save">SAVE</string>
     <string name="login_to">LOGIN TO SUBJAM</string>
-    <string name="forget_pass">Forget Password</string>
+    <string name="forget_pass">Forgot Password</string>
     <string name="follow">FOLLOW</string>
 
 </resources>
