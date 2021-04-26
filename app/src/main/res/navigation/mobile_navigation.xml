@@ -53,4 +53,9 @@
         android:name="com.example.myapplication.ui.Password.PasswordFragment"
         tools:layout="@layout/password_fragment"/>
 
+    <fragment
+        android:id="@+id/follow"
+        android:name="com.example.myapplication.ui.Follow.FollowBandProfileFragment"
+        tools:layout="@layout/follow_band_profile_fragment"/>
+
 </navigation>

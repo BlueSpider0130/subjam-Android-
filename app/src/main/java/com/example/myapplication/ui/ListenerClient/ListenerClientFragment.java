@@ -8,6 +8,7 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
 import android.os.Handler;
 import android.view.LayoutInflater;
@@ -26,6 +27,7 @@ public class ListenerClientFragment extends Fragment {
     public SeekBar seek_bar;
     public ImageView music_play;
     public ImageButton music_stop;
+    public TextView band_name;
     MediaPlayer player;
     Handler seekHandler = new Handler();
 
@@ -37,6 +39,8 @@ public class ListenerClientFragment extends Fragment {
         seek_bar = (SeekBar) root.findViewById(R.id.music_playBar);
         music_play = (ImageButton) root.findViewById(R.id.btn_music_play);
         music_stop = (ImageButton) root.findViewById(R.id.btn_music_stop);
+        band_name = (TextView) root.findViewById(R.id.band_name_from_list);
+
         before.setVisibility(View.VISIBLE);
 
         music_play.setOnClickListener(new View.OnClickListener() {
@@ -47,12 +51,20 @@ public class ListenerClientFragment extends Fragment {
                 music_stop.setVisibility(View.VISIBLE);
             }
         });
+
         music_stop.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 player.pause();
                 music_stop.setVisibility(View.INVISIBLE);
                 music_play.setVisibility(View.VISIBLE);
+            }
+        });
+
+        band_name.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Navigation.findNavController(root).navigate(R.id.follow);
             }
         });
 
