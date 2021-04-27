@@ -62,15 +62,10 @@
 
                 <EditText
                     android:id="@+id/editTextEmail"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    style="@style/EditText"
                     android:layout_marginTop="5dp"
-                    android:background="@color/grey_background"
                     android:hint="@string/email"
                     android:inputType="textPersonName"
-                    android:padding="10dp"
-                    android:textColor="@color/default_font_color"
-                    android:textSize="@dimen/font_size_signup"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textView7"
@@ -78,15 +73,10 @@
 
                 <EditText
                     android:id="@+id/editTextUserName"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    style="@style/EditText"
                     android:layout_marginTop="10dp"
-                    android:background="@color/grey_background"
                     android:hint="@string/username"
                     android:inputType="textPersonName"
-                    android:padding="10dp"
-                    android:textColor="@color/default_font_color"
-                    android:textSize="@dimen/font_size_signup"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/editTextEmail"
@@ -94,13 +84,10 @@
 
                 <TextView
                     android:id="@+id/editTextPassword"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    style="@style/EditText"
                     app:layout_constraintWidth_percent="0.8"
                     android:text="@string/password"
-                    android:padding="10dp"
                     android:layout_marginTop="10dp"
-                    android:background="@color/grey_background"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/editTextUserName"/>
@@ -123,11 +110,8 @@
 
                 <EditText
                     android:id="@+id/editText_socialLink"
-                    android:layout_width="0dp"
-                    android:layout_height="40dp"
+                    style="@style/EditText"
                     android:layout_marginTop="10dp"
-                    android:background="@color/default_back_grey"
-                    android:ems="10"
                     android:hint="Add website / social media URL here"
                     android:inputType="textPersonName"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -137,14 +121,10 @@
 
                 <TextView
                     android:id="@+id/textView_check"
-                    android:layout_width="138dp"
-                    android:layout_height="23dp"
-                    android:layout_gravity="center"
+                    style="@style/CheckText"
                     android:layout_marginStart="5dp"
                     android:layout_marginLeft="5dp"
-                    android:gravity="center"
-                    android:text="EXPLICIT CONTENT"
-                    android:textColor="@color/black"
+                    android:text="@string/explicit"
                     android:textFontWeight="700"
                     app:autoSizeTextType="uniform"
                     app:layout_constraintBottom_toBottomOf="@+id/checkbox_imageView"
@@ -154,8 +134,7 @@
 
                 <ImageView
                     android:id="@+id/checkbox_imageView"
-                    android:layout_width="21dp"
-                    android:layout_height="23dp"
+                    style="@style/CheckBox"
                     android:layout_marginTop="5dp"
                     app:layout_constraintStart_toStartOf="@+id/editText_socialLink"
                     app:layout_constraintTop_toBottomOf="@+id/editText_socialLink"
@@ -163,8 +142,7 @@
 
                 <ImageView
                     android:id="@+id/tick_imageView"
-                    android:layout_width="29dp"
-                    android:layout_height="56dp"
+                    style="@style/Tick"
                     android:visibility="invisible"
                     app:layout_constraintBottom_toBottomOf="@+id/checkbox_imageView"
                     app:layout_constraintEnd_toEndOf="@+id/checkbox_imageView"
@@ -187,10 +165,8 @@
                     android:layout_width="@dimen/btn_width_register"
                     android:layout_height="@dimen/btn_height_register"
                     android:layout_marginTop="25dp"
-                    android:background="@drawable/btn_rounded_corners"
-                    android:text="SAVE"
-                    android:textColor="@color/white"
-                    android:textSize="@dimen/btn_font_size"
+                    android:text="@string/save"
+                    style="@style/BlueButton"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toStartOf="parent"

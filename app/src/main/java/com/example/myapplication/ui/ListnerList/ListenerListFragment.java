@@ -29,6 +29,7 @@ public class ListenerListFragment extends Fragment {
 
     private ListenerListViewModel mViewModel;
     Activity thisFrag = this.getActivity();
+    ImageView close_icon;
 
     public static ListenerListFragment newInstance() {
         return new ListenerListFragment();
@@ -41,7 +42,7 @@ public class ListenerListFragment extends Fragment {
 
         View root = inflater.inflate(R.layout.listener_list_fragment, container, false);;
         final BottomNavigationView bottom_bar = (BottomNavigationView) this.getActivity().findViewById(R.id.nav_view);
-        ImageView close_icon = (ImageView) this.getActivity().findViewById(R.id.back_icon);
+        close_icon = (ImageView) this.getActivity().findViewById(R.id.back_icon);
         String[] listener_name = {"Apple Username", "Banana Username", "Litchi Username", "Mango Username", "PineApple Username", "PineApple Username", "PineApple Username"};//fruit names array
         ArrayList<HashMap<String,Object>> arrayList=new ArrayList<>();
         ListView simpleListView = (ListView)root.findViewById(R.id.listener_list) ;

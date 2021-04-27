@@ -24,8 +24,7 @@
 
         <ImageView
             android:id="@+id/camera_icon"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
+            style="@style/CameraIcon"
             android:layout_marginTop="30dp"
             app:layout_constraintEnd_toEndOf="@+id/camera_icon_imageView"
             app:layout_constraintStart_toStartOf="@+id/camera_icon_imageView"
@@ -44,12 +43,9 @@
 
         <EditText
             android:id="@+id/editText_titleBroadcast"
-            android:layout_width="0dp"
-            android:layout_height="40dp"
+            style="@style/EditText"
             android:layout_marginTop="10dp"
-            android:background="@color/default_back_grey"
-            android:ems="10"
-            android:hint="Title of Broadcast"
+            android:hint="@string/title_of_broadcast"
             android:inputType="textPersonName"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -58,12 +54,9 @@
 
         <EditText
             android:id="@+id/editText_genre"
-            android:layout_width="0dp"
-            android:layout_height="40dp"
+            style="@style/EditText"
             android:layout_marginTop="15dp"
-            android:background="@color/default_back_grey"
-            android:ems="10"
-            android:hint="Genre"
+            android:hint="@string/genre"
             android:inputType="textPersonName"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -87,15 +80,10 @@
 
         <TextView
             android:id="@+id/textView_check"
-            android:layout_width="138dp"
-            android:layout_height="23dp"
-            android:layout_gravity="center"
+            style="@style/CheckText"
             android:layout_marginStart="5dp"
             android:layout_marginLeft="5dp"
-            android:gravity="center"
-            android:textStyle="bold"
-            android:text="EXPLICIT CONTENT"
-            android:textColor="@color/black"
+            android:text="@string/explicit"
             android:textFontWeight="700"
             app:autoSizeTextType="uniform"
             app:layout_constraintBottom_toBottomOf="@+id/checkbox_imageView"
@@ -105,8 +93,7 @@
 
         <ImageView
             android:id="@+id/checkbox_imageView"
-            android:layout_width="21dp"
-            android:layout_height="23dp"
+            style="@style/CheckBox"
             android:layout_marginTop="15dp"
             app:layout_constraintStart_toStartOf="@+id/editText_description"
             app:layout_constraintTop_toBottomOf="@+id/editText_description"
@@ -114,8 +101,7 @@
 
         <ImageView
             android:id="@+id/tick_imageView"
-            android:layout_width="29dp"
-            android:layout_height="56dp"
+            style="@style/Tick"
             android:visibility="invisible"
             app:layout_constraintBottom_toBottomOf="@+id/checkbox_imageView"
             app:layout_constraintEnd_toEndOf="@+id/checkbox_imageView"
@@ -129,10 +115,8 @@
             android:layout_height="@dimen/btn_height_register"
             android:layout_marginTop="30dp"
             android:layout_marginBottom="50dp"
-            android:background="@drawable/btn_rounded_corners"
-            android:text="GO LIVE"
-            android:textColor="@color/white"
-            android:textSize="@dimen/btn_font_size"
+            style="@style/BlueButton"
+            android:text="@string/go_live"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"

@@ -30,8 +30,9 @@ public class ProfileFragment extends Fragment {
 
         final BottomNavigationView bottom_bar = (BottomNavigationView) this.getActivity().findViewById(R.id.nav_view);
 
-        ImageView before = (ImageView) this.getActivity().findViewById(R.id.back_icon);
+        final ImageView before = (ImageView) this.getActivity().findViewById(R.id.back_icon);
         before.setVisibility(View.INVISIBLE);
+        before.setImageResource(R.drawable.back_icon);
         profileViewModel =
                 new ViewModelProvider(this).get(ProfileViewModel.class);
         View root = inflater.inflate(R.layout.fragment_profile, container, false);
@@ -44,6 +45,7 @@ public class ProfileFragment extends Fragment {
         follower.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                before.setVisibility(View.VISIBLE);
                 Navigation.findNavController(v).navigate(R.id.listener_list);
             }
         });

@@ -79,12 +79,12 @@ public class EditProfileFragment extends Fragment {
                 Navigation.findNavController(root).navigate(R.id.password);
             }
         });
-        back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Navigation.findNavController(root).navigate(R.id.navigation_profile);
-            }
-        });
+//        back.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Navigation.findNavController(root).navigate(R.id.navigation_profile);
+//            }
+//        });
 
         return root;
     }

@@ -100,10 +100,8 @@
             android:layout_width="@dimen/btn_width_register"
             android:layout_height="@dimen/btn_height_register"
             android:layout_marginBottom="20dp"
-            android:background="@drawable/btn_rounded_corners"
+            style="@style/BlueButton"
             android:text="@string/follow"
-            android:textColor="@color/white"
-            android:textSize="@dimen/btn_font_size"
             app:layout_constraintBottom_toTopOf="@+id/description_streaming"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />

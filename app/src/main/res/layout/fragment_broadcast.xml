@@ -47,15 +47,10 @@
 
     <TextView
         android:id="@+id/textView_check"
-        android:layout_width="wrap_content"
-        android:layout_height="23dp"
-        android:layout_gravity="left"
+        style="@style/CheckText"
         android:layout_marginStart="5dp"
         android:layout_marginLeft="5dp"
-        android:gravity="center"
-        android:text="I AGREE"
-        android:textSize="25dp"
-        android:textColor="@color/black"
+        android:text="@string/agree"
         android:textFontWeight="700"
         app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toBottomOf="@+id/checkbox_imageView"
@@ -65,8 +60,7 @@
 
     <ImageView
         android:id="@+id/checkbox_imageView"
-        android:layout_width="21dp"
-        android:layout_height="23dp"
+        style="@style/CheckBox"
         android:layout_marginTop="20dp"
         app:layout_constraintStart_toStartOf="@+id/editTextText_ToS"
         app:layout_constraintTop_toBottomOf="@+id/editTextText_ToS"
@@ -74,8 +68,7 @@
 
     <ImageView
         android:id="@+id/tick_imageView"
-        android:layout_width="29dp"
-        android:layout_height="56dp"
+        style="@style/Tick"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="@+id/checkbox_imageView"
         app:layout_constraintEnd_toEndOf="@+id/checkbox_imageView"
@@ -87,11 +80,9 @@
         android:id="@+id/continue_button"
         android:layout_width="@dimen/btn_width_register"
         android:layout_height="@dimen/btn_height_register"
-        android:background="@drawable/btn_rounded_corners"
+        style="@style/BlueButton"
         android:visibility="invisible"
-        android:text="CONTINUE"
-        android:textColor="@color/white"
-        android:textSize="@dimen/btn_font_size"
+        android:text="@string/con"
         app:layout_constraintBottom_toBottomOf="@+id/textView_check"
         app:layout_constraintEnd_toEndOf="@+id/editTextText_ToS"
         app:layout_constraintTop_toTopOf="@+id/textView_check" />
